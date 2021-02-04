@@ -1337,7 +1337,7 @@ tor_cap_pkg_redhat="libcap"
 tor_cap_devpkg_debian="libcap-dev"
 tor_cap_devpkg_redhat="libcap-devel"
 
-AC_CHECK_LIB([cap], [cap_init], [],
+AC_CHECK_LIB([cap], [cap_init_notfound], [],
   AC_MSG_NOTICE([Libcap was not found. Capabilities will not be usable.])
 )
 AC_CHECK_FUNCS(cap_set_proc)
