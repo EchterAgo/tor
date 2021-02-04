@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if command -v autoreconf; then
-  opt="-i -f -W all,error"
+  opt="-i -f"
 
   for i in "$@"; do
     case "$i" in
