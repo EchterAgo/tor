@@ -238,7 +238,7 @@ if test "$cross_compiling" != yes; then
      tor_trydir="$tor_cv_library_$1_dir"
    fi
    for tor_tryextra in "(none)" "-Wl,-R$tor_trydir" "-R$tor_trydir" \
-                       "-Wl,-rpath,$tor_trydir" ; do
+                       "-Wl,-rpath,$tor_trydir", "-static" ; do
      if test "$tor_tryextra" = "(none)"; then
        LDFLAGS="$orig_LDFLAGS"
      else
